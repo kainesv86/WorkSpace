@@ -1,12 +1,12 @@
-import "./App.css";
 import NavBar from "./components/navbar";
 import Home from "./pages/home";
 
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
         return (
-                <div className="App">
+                <React.Fragment>
                         <NavBar />
                         <Switch>
                                 <Route path="/locations">
@@ -16,7 +16,7 @@ function App() {
                                         <Home />
                                 </Route>
                         </Switch>
-                </div>
+                </React.Fragment>
         );
 }
 

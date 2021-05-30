@@ -32,7 +32,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
         return (
                 <React.Fragment>
                         <div className="relative z-10 flex items-center justify-between w-full h-20 px-4 bg-amber-400 sm:px-8">
-                                <Link to="/home">
+                                <Link to="/">
                                         <img src="/share/logo.svg" alt="hello" />
                                 </Link>
                                 <div className="hidden h-full sm:block">

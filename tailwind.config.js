@@ -5,8 +5,11 @@ module.exports = {
         darkMode: false, // or 'media' or 'class'
         theme: {
                 extend: {
-                        width: {
+                        spacing: {
+                                128: "32rem",
                                 136: "34rem",
+                                144: "36rem",
+                                148: "37rem",
                         },
                 },
                 fontFamily: {
@@ -21,6 +24,7 @@ module.exports = {
                         indigo: colors.indigo,
                         red: colors.rose,
                         amber: colors.amber,
+                        blue: colors.blue,
                 },
         },
         variants: {

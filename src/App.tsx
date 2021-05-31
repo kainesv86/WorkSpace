@@ -1,5 +1,6 @@
 import NavBar from "./components/navbar";
 import Home from "./pages/home";
+import Locations from "./pages/locations";
 
 import React from "react";
 import { Route, Switch } from "react-router-dom";
@@ -10,7 +11,7 @@ function App() {
                         <NavBar />
                         <Switch>
                                 <Route path="/locations">
-                                        <h1>Hello</h1>
+                                        <Locations />
                                 </Route>
                                 <Route path="/">
                                         <Home />

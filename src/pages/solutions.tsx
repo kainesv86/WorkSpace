@@ -15,16 +15,16 @@ const solutionsService: SolutionsServiceProps[] = [
                 capacity: "1 Person",
         },
         {
-                imgUrl: "/share/solodesk.svg",
-                name: "Solo Desk",
-                describe: "Your own desk in a shared office",
-                capacity: "1 Person",
+                imgUrl: "/share/standardOffice.svg",
+                name: "Standard Office",
+                describe: "Private, lockable space",
+                capacity: "1 - 20 Persons",
         },
         {
-                imgUrl: "/share/solodesk.svg",
+                imgUrl: "/share/officeSuite.svg",
                 name: "Solo Desk",
                 describe: "Your own desk in a shared office",
-                capacity: "1 Person",
+                capacity: "20 - 100 Persons",
         },
 ];
 
@@ -41,37 +41,21 @@ const Solutions: React.FunctionComponent<SolutionsProps> = () => {
                         </h2>
                         <ul className="flex flex-col items-center justify-center w-full sm:flex-row-reverse sm:mt-16">
                                 {solutionsService.map((item, index) => (
-                                        <li className="w-full border-4 border-amber-400">
+                                        <li className="w-full mt-6 border-4 border-amber-400" key={index}>
                                                 <div className="w-full h-64">
-                                                        <img
-                                                                src="/share/solodesk.svg"
-                                                                alt=""
-                                                                className="w-full h-full"
-                                                        />
+                                                        <img src={item.imgUrl} alt="" className="w-full h-full" />
                                                 </div>
                                                 <div className="w-full h-auto p-4">
                                                         <h1 className="mb-2 text-4xl font-bold text-gray-800">
-                                                                Solo desk
+                                                                {item.name}
                                                         </h1>
                                                         <p className="mb-2 font-medium text-gray-700">
-                                                                Your own desk in a shared office
+                                                                {item.describe}
                                                         </p>
-                                                        <p className="font-medium text-gray-700">1 Person</p>
+                                                        <p className="font-medium text-gray-700">{item.capacity}</p>
                                                 </div>
                                         </li>
                                 ))}
-                                {/* <li className="w-full border-4 border-amber-400">
-                                        <div className="w-full h-64">
-                                                <img src="/share/solodesk.svg" alt="" className="w-full h-full" />
-                                        </div>
-                                        <div className="w-full h-auto p-4">
-                                                <h1 className="mb-2 text-4xl font-bold text-gray-800">Solo desk</h1>
-                                                <p className="mb-2 font-medium text-gray-700">
-                                                        Your own desk in a shared office
-                                                </p>
-                                                <p className="font-medium text-gray-700">1 Person</p>
-                                        </div>
-                                </li> */}
                         </ul>
                 </div>
         );

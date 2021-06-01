@@ -9,7 +9,7 @@ interface SolutionsServiceProps {
 
 const solutionsService: SolutionsServiceProps[] = [
         {
-                imgUrl: "/share/solodesk.svg",
+                imgUrl: "/share/soloDesk.svg",
                 name: "Solo Desk",
                 describe: "Your own desk in a shared office",
                 capacity: "1 Person",
@@ -31,22 +31,38 @@ const solutionsService: SolutionsServiceProps[] = [
 export interface SolutionsProps {}
 
 const Solutions: React.FunctionComponent<SolutionsProps> = () => {
+        const [choice, setChoice] = React.useState<Number>(0);
+        const handleClick = React.useCallback(
+                (index) => {
+                        setChoice(index);
+                },
+                [setChoice]
+        );
+
         return (
-                <div className="items-center justify-center w-full mt-8">
+                <div className="items-center justify-center w-full px-0 mt-8 sm:px-20">
                         <h1 className="text-3xl font-bold tracking-tight text-center sm:text-6xl text-amber-500">
                                 Working solutions
                         </h1>
                         <h2 className="text-xl font-medium tracking-tight text-center sm:text-4xl text-amber-500">
                                 For companies of all sizes, fit your needs
                         </h2>
-                        <ul className="flex flex-col items-center justify-center w-full sm:flex-row-reverse sm:mt-16">
+                        <ul className="flex flex-col items-center justify-center w-full mt-16 sm:flex-row">
                                 {solutionsService.map((item, index) => (
-                                        <li className="w-full mt-6 border-4 border-amber-400" key={index}>
+                                        <li
+                                                className={`w-full mt-6 sm:mt-0 border-4 ${
+                                                        index === choice ? "border-blue-400" : "border-amber-400"
+                                                } sm:mr-0 sm:w-100 ${
+                                                        index !== solutionsService.length - 1 ? "sm:mr-16" : ""
+                                                }`}
+                                                key={index}
+                                                onClick={() => handleClick(index)}
+                                        >
                                                 <div className="w-full h-64">
                                                         <img src={item.imgUrl} alt="" className="w-full h-full" />
                                                 </div>
                                                 <div className="w-full h-auto p-4">
-                                                        <h1 className="mb-2 text-4xl font-bold text-gray-800">
+                                                        <h1 className="mb-2 text-4xl font-bold tracking-tighter text-gray-800">
                                                                 {item.name}
                                                         </h1>
                                                         <p className="mb-2 font-medium text-gray-700">

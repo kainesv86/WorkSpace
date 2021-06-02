@@ -20,8 +20,8 @@ export const solutionsService: SolutionsServiceProps[] = [
         },
         {
                 imgUrl: "/share/officeSuite.svg",
-                name: "Solo Desk",
-                describe: "Your own desk in a shared office",
+                name: "Office Suite",
+                describe: "Space with private amenities",
                 capacity: "20 - 100 Persons",
         },
 ];

@@ -25,6 +25,8 @@
         "scripts": {
                 "start": "react-scripts start",
                 "start:dev": "craco start",
+                "tailwindcss:dev": "npx tailwindcss build src/index.css -o src/style/tailwind.output.css",
+                "tailwindcss": "NODE_ENV=production npx tailwindcss build src/index.css -o src/style/tailwind.output.css",
                 "build": "craco build production",
                 "test": "craco test",
                 "eject": "react-scripts eject"

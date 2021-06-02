@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 interface SolutionsServiceProps {
         imgUrl: string;
@@ -47,7 +48,14 @@ const Solutions: React.FunctionComponent<SolutionsProps> = () => {
                         <h2 className="text-xl font-medium tracking-tight text-center sm:text-4xl text-amber-500">
                                 For companies of all sizes, fit your needs
                         </h2>
-                        <ul className="flex flex-col items-center justify-center w-full mt-16 sm:flex-row">
+                        <div className="justify-center w-full px-8 mt-8 sm:flex">
+                                <Link to="/solutions">
+                                        <button className="w-full px-4 py-2 text-white rounded outline-none sm:w-48 bg-amber-400 focus:outline-none">
+                                                Next
+                                        </button>
+                                </Link>
+                        </div>
+                        <ul className="flex flex-col items-center justify-center w-full mt-0 sm:mt-8 sm:flex-row">
                                 {solutionsService.map((item, index) => (
                                         <li
                                                 className={`w-full mt-6 sm:mt-0 border-4 ${

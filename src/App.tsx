@@ -1,7 +1,7 @@
 import NavBar from "./components/navbar";
 import Home from "./pages/home";
-import Locations from "./pages/locations";
-import Solutions from "./pages/solutions";
+import Locations from "./pages/locations/";
+import Solutions from "./pages/solutions/";
 
 import React from "react";
 import { Route, Switch } from "react-router-dom";

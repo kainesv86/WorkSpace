@@ -1,6 +1,11 @@
 import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+import { RootState, store } from "../store";
+import { UserState } from "../store/user/dto";
+import { resetUser } from "../store/user";
+
 export interface NavBarProps {}
 
 interface LinkProps {
@@ -19,6 +24,9 @@ const links: LinkProps[] = [
 
 const NavBar: React.FunctionComponent<NavBarProps> = () => {
         const [burger, setBurger] = React.useState<Boolean>(false);
+
+        const userState = useSelector<RootState, UserState>((item) => item.user);
+
         const newLocation = useLocation();
 
         const location = React.useMemo<string>(() => {
@@ -28,6 +36,10 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
         const handleClick = React.useCallback(() => {
                 setBurger(!burger);
         }, [setBurger, burger]);
+
+        const handleLogout = React.useCallback(() => {
+                store.dispatch(resetUser);
+        }, []);
 
         return (
                 <React.Fragment>
@@ -62,18 +74,33 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                                                 ))}
                                         </ul>
                                 </div>
-                                <div className="flex hidden sm:flex">
-                                        <Link to="/user/register">
+                                {!userState.isLogin ? (
+                                        <div className="flex hidden sm:flex">
+                                                <Link to="/user/register">
+                                                        <div className="px-4 py-2 mr-2 text-base font-bold text-white cursor-pointer">
+                                                                Register
+                                                        </div>
+                                                </Link>
+                                                <Link to="/user/login">
+                                                        <div className="px-4 py-2 text-base font-bold text-white border border-white rounded cursor-pointer">
+                                                                Login
+                                                        </div>
+                                                </Link>
+                                        </div>
+                                ) : (
+                                        <div className="flex hidden sm:flex">
                                                 <div className="px-4 py-2 mr-2 text-base font-bold text-white cursor-pointer">
-                                                        Register
+                                                        {`Hello ${userState.fullName}`}
                                                 </div>
-                                        </Link>
-                                        <Link to="/user/login">
-                                                <div className="px-4 py-2 text-base font-bold text-white border border-white rounded cursor-pointer">
-                                                        Login
+
+                                                <div
+                                                        className="px-4 py-2 text-base font-bold text-white border border-white rounded cursor-pointer"
+                                                        onClick={() => handleLogout()}
+                                                >
+                                                        Logout
                                                 </div>
-                                        </Link>
-                                </div>
+                                        </div>
+                                )}
                                 <div className="sm:hidden">
                                         <div
                                                 className="cursor-pointer"
@@ -111,39 +138,70 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                                                         </li>
                                                 ))}
                                         </ul>
-                                        <ul className="p-8">
-                                                <li
-                                                        className="mb-4"
-                                                        onClick={() => {
-                                                                setBurger(!burger);
-                                                        }}
-                                                >
-                                                        <Link to="/user/register">
-                                                                <div className="flex justify-start w-full p-2">
-                                                                        <img src="/share/register.svg" alt="" />
-                                                                        <p className="ml-4 text-xl font-bold text-white">
-                                                                                Register
-                                                                        </p>
-                                                                </div>
-                                                        </Link>
-                                                </li>
+                                        {!userState.isLogin ? (
+                                                <ul className="p-8">
+                                                        <li
+                                                                className="mb-4"
+                                                                onClick={() => {
+                                                                        setBurger(!burger);
+                                                                }}
+                                                        >
+                                                                <Link to="/user/register">
+                                                                        <div className="flex justify-start w-full p-2">
+                                                                                <img src="/share/register.svg" alt="" />
+                                                                                <p className="ml-4 text-xl font-bold text-white">
+                                                                                        Register
+                                                                                </p>
+                                                                        </div>
+                                                                </Link>
+                                                        </li>
 
-                                                <li
-                                                        className="mb-4"
-                                                        onClick={() => {
-                                                                setBurger(!burger);
-                                                        }}
-                                                >
-                                                        <Link to="/user/login">
+                                                        <li
+                                                                className="mb-4"
+                                                                onClick={() => {
+                                                                        setBurger(!burger);
+                                                                }}
+                                                        >
+                                                                <Link to="/user/login">
+                                                                        <div className="flex justify-start w-full p-2">
+                                                                                <img src="/share/login.svg" alt="" />
+                                                                                <p className="ml-4 text-xl font-bold text-white">
+                                                                                        Login
+                                                                                </p>
+                                                                        </div>
+                                                                </Link>
+                                                        </li>
+                                                </ul>
+                                        ) : (
+                                                <ul className="p-8">
+                                                        <li
+                                                                className="mb-4"
+                                                                onClick={() => {
+                                                                        setBurger(!burger);
+                                                                }}
+                                                        >
                                                                 <div className="flex justify-start w-full p-2">
-                                                                        <img src="/share/login.svg" alt="" />
                                                                         <p className="ml-4 text-xl font-bold text-white">
-                                                                                Login
+                                                                                {`Hello ${userState.fullName}`}
                                                                         </p>
                                                                 </div>
-                                                        </Link>
-                                                </li>
-                                        </ul>
+                                                        </li>
+
+                                                        <li
+                                                                className="mb-4"
+                                                                onClick={() => {
+                                                                        setBurger(!burger);
+                                                                        handleLogout();
+                                                                }}
+                                                        >
+                                                                <div className="flex justify-start w-full p-2">
+                                                                        <p className="ml-4 text-xl font-bold text-white">
+                                                                                Logout
+                                                                        </p>
+                                                                </div>
+                                                        </li>
+                                                </ul>
+                                        )}
                                 </div>
                         ) : null}
                 </React.Fragment>

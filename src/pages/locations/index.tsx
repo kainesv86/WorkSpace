@@ -4,14 +4,25 @@ import GoogleMapReact from "google-map-react";
 
 import { locations } from "./locationsProps";
 
+import { store, RootState } from "../../store";
+import { useSelector } from "react-redux";
+import { changeLocation } from "../../store/choices";
+import { ChoicesState } from "../../store/choices/dto";
+
 export interface LocationsProps {}
 
 const Locations: React.FunctionComponent<LocationsProps> = () => {
-        const [choice, setChoice] = React.useState<Number>(0);
+        const choicesState = useSelector<RootState, ChoicesState>((item) => item.choices);
 
-        const handleClick = React.useCallback((index) => {
-                setChoice(index);
-        }, []);
+        const [choice, setChoice] = React.useState<Number>(choicesState.location);
+
+        const handleClick = React.useCallback(
+                (index) => {
+                        setChoice(index);
+                        store.dispatch(changeLocation(index));
+                },
+                [setChoice]
+        );
 
         return (
                 <div className="flex w-full h-auto p-0 sm:px-20 sm:py-16">

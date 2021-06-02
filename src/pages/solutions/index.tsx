@@ -2,13 +2,21 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { solutionsService } from "./solutionsProps";
 
+import { store, RootState } from "../../store";
+import { ChoicesState } from "../../store/choices/dto";
+import { useSelector } from "react-redux";
+import { changeSolution } from "../../store/choices";
+
 export interface SolutionsProps {}
 
 const Solutions: React.FunctionComponent<SolutionsProps> = () => {
-        const [choice, setChoice] = React.useState<Number>(0);
+        const choicesState = useSelector<RootState, ChoicesState>((item) => item.choices);
+
+        const [choice, setChoice] = React.useState<Number>(choicesState.solution);
         const handleClick = React.useCallback(
                 (index) => {
                         setChoice(index);
+                        store.dispatch(changeSolution(index));
                 },
                 [setChoice]
         );

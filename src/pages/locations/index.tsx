@@ -2,50 +2,9 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import GoogleMapReact from "google-map-react";
 
+import { locations } from "./locationsProps";
+
 export interface LocationsProps {}
-
-interface LocationsInfoProps {
-        name: string;
-        city: string;
-        tags: string;
-        imgUrl: string;
-}
-
-const locations: LocationsInfoProps[] = [
-        {
-                name: "WorkSpace Tower",
-                city: "Ho Chi Minh City",
-                tags: "Event space • Wellness room • Parking • 4+",
-                imgUrl: "/images/workspace1.jpg",
-        },
-
-        {
-                name: "WorkSpace Tower",
-                city: "Ho Chi Minh City",
-                tags: "Event space • Wellness room • Parking • 4+",
-                imgUrl: "/images/workspace1.jpg",
-        },
-
-        {
-                name: "WorkSpace Tower",
-                city: "Ho Chi Minh City",
-                tags: "Event space • Wellness room • Parking • 4+",
-                imgUrl: "/images/workspace1.jpg",
-        },
-
-        {
-                name: "WorkSpace Tower",
-                city: "Ho Chi Minh City",
-                tags: "Event space • Wellness room • Parking • 4+",
-                imgUrl: "/images/workspace1.jpg",
-        },
-        {
-                name: "WorkSpace Tower",
-                city: "Ho Chi Minh City",
-                tags: "Event space • Wellness room • Parking • 4+",
-                imgUrl: "/images/workspace1.jpg",
-        },
-];
 
 const Locations: React.FunctionComponent<LocationsProps> = () => {
         const [choice, setChoice] = React.useState<Number>(0);

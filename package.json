@@ -23,7 +23,7 @@
                 "web-vitals": "^1.0.1"
         },
         "scripts": {
-                "start": "react start",
+                "start": "react-scripts start",
                 "start:dev": "craco start",
                 "build": "craco build production",
                 "test": "craco test",

@@ -28,6 +28,9 @@ function App() {
                                 <Route path="/order">
                                         <Order />
                                 </Route>
+                                <Route path="/order/done">
+                                        <Order />
+                                </Route>
                                 <Route path="/">
                                         <Home />
                                 </Route>

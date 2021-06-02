@@ -38,7 +38,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
         }, [setBurger, burger]);
 
         const handleLogout = React.useCallback(() => {
-                store.dispatch(resetUser);
+                store.dispatch(resetUser());
         }, []);
 
         return (

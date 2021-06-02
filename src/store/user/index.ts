@@ -5,6 +5,7 @@ const initialState: UserState = {
         username: "kainesv",
         fullName: "Kainé Phạm",
         email: "kainesv86@gmail.com",
+        isLogin: true,
 };
 
 export const userSlice = createSlice({

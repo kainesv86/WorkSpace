@@ -22,7 +22,7 @@ const Solutions: React.FunctionComponent<SolutionsProps> = () => {
         );
 
         return (
-                <div className="items-center justify-center w-full px-0 mt-8 sm:px-20">
+                <div className="items-center justify-center w-full px-0 mt-8 sm:px-20 animate-fade-in">
                         <h1 className="text-3xl font-bold tracking-tight text-center sm:text-6xl text-amber-500">
                                 Working solutions
                         </h1>
@@ -30,7 +30,7 @@ const Solutions: React.FunctionComponent<SolutionsProps> = () => {
                                 For companies of all sizes, fit your needs
                         </h2>
                         <div className="justify-center w-full px-8 mt-8 sm:flex">
-                                <Link to="/solutions">
+                                <Link to="/order">
                                         <button className="w-full px-4 py-2 text-white rounded outline-none sm:w-48 bg-amber-400 focus:outline-none">
                                                 Next
                                         </button>

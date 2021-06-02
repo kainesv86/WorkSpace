@@ -25,7 +25,7 @@ const Locations: React.FunctionComponent<LocationsProps> = () => {
         );
 
         return (
-                <div className="flex w-full h-auto p-0 sm:px-20 sm:py-16">
+                <div className="flex w-full h-auto p-0 sm:px-20 sm:py-16 animate-fade-in">
                         <div className="w-full h-full p-2 sm:p-8 bg-amber-200 sm:w-144">
                                 <div className="flex items-center justify-center mb-2">
                                         <select

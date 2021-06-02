@@ -8,10 +8,20 @@ module.exports = {
                         spacing: {
                                 100: "25rem",
                                 108: "27rem",
+                                120: "30rem",
                                 128: "32rem",
                                 136: "34rem",
                                 144: "36rem",
                                 148: "37rem",
+                        },
+                        keyframes: {
+                                fadein: {
+                                        "0%": { opacity: "0", transform: "translateY(-10px)" },
+                                        "100%": { opacity: "1", transform: "translateY(0)" },
+                                },
+                        },
+                        animation: {
+                                "fade-in": "fadein 0.5s ease-out",
                         },
                 },
                 fontFamily: {

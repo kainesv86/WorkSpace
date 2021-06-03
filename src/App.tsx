@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import Locations from "./pages/locations/";
 import Solutions from "./pages/solutions/";
 import Order from "./pages/order";
+import OrderDone from "./pages/orderDone";
 import ComingSoon from "./pages/comingSoon";
 
 import React from "react";
@@ -25,10 +26,10 @@ function App() {
                                 <Route path="/aboutus">
                                         <ComingSoon />
                                 </Route>
-                                <Route path="/order">
-                                        <Order />
-                                </Route>
                                 <Route path="/order/done">
+                                        <OrderDone />
+                                </Route>
+                                <Route path="/order">
                                         <Order />
                                 </Route>
                                 <Route path="/">

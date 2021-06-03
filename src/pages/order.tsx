@@ -8,11 +8,14 @@ import { solutionsService } from "./solutions/solutionsProps";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
 import { ChoicesState } from "../store/choices/dto";
+import { UserState } from "../store/user/dto";
 
 export interface OrderProps {}
 
 const Order: React.FunctionComponent<OrderProps> = () => {
         const choicesState = useSelector<RootState, ChoicesState>((item) => item.choices);
+        const UserState = useSelector<RootState, UserState>((item) => item.user);
+
         return (
                 <div className="flex items-center justify-center w-full h-auto py-8 sm:py-16 animate-fade-in">
                         <div className="flex-col hidden mr-16 sm:flex w-128">
@@ -77,13 +80,14 @@ const Order: React.FunctionComponent<OrderProps> = () => {
                                                         name="email"
                                                         id="email"
                                                         className="flex w-full h-10 px-4 mb-4 bg-white rounded outline-none"
+                                                        defaultValue={UserState.email}
                                                 />
-                                                <Link to="/done">
+                                                <Link to="order/done">
                                                         <button className="w-full py-2 mb-4 text-base font-bold text-center text-white border-2 border-white rounded outline-none bg-amber-300 focus:outline-none">
                                                                 Get in touch
                                                         </button>
                                                 </Link>
-                                                <Link to="/done">
+                                                <Link to="order/done">
                                                         <button className="w-full py-2 text-base font-bold text-center text-blue-400 border-2 border-blue-400 rounded outline-none bg-amber-300 focus:outline-none">
                                                                 Book a tour
                                                         </button>

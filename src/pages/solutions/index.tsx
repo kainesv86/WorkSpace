@@ -31,7 +31,7 @@ const Solutions: React.FunctionComponent<SolutionsProps> = () => {
                         </h2>
                         <div className="justify-center w-full px-8 mt-8 sm:flex">
                                 <Link to="/order">
-                                        <button className="w-full px-4 py-2 text-white rounded outline-none sm:w-48 bg-amber-400 focus:outline-none">
+                                        <button className="w-full px-4 py-2 text-white rounded shadow outline-none sm:w-48 bg-amber-400 focus:outline-none hover:bg-amber-500">
                                                 Next
                                         </button>
                                 </Link>
@@ -39,7 +39,7 @@ const Solutions: React.FunctionComponent<SolutionsProps> = () => {
                         <ul className="flex flex-col items-center justify-center w-full mt-0 sm:mt-8 sm:flex-row">
                                 {solutionsService.map((item, index) => (
                                         <li
-                                                className={`w-full mt-6 sm:mt-0 border-4 ${
+                                                className={`w-full mt-6 sm:mt-0 border-4  hover:border-blue-400 shadow cursor-pointer ${
                                                         index === choice ? "border-blue-400" : "border-amber-400"
                                                 } sm:mr-0 sm:w-100 ${
                                                         index !== solutionsService.length - 1 ? "sm:mr-16" : ""

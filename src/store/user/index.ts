@@ -12,7 +12,7 @@ export const userSlice = createSlice({
         name: "user",
         initialState,
         reducers: {
-                resetUser: () => ({ ...initialState, isLogin: false }),
+                resetUser: () => ({ ...initialState, isLogin: false, email: "" }),
         },
 });
 

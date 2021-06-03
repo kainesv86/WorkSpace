@@ -18,7 +18,7 @@ const Order: React.FunctionComponent<OrderProps> = () => {
 
         return (
                 <div className="flex items-center justify-center w-full h-auto py-8 sm:py-16 animate-fade-in">
-                        <div className="flex-col hidden mr-16 sm:flex w-128">
+                        <div className="flex-col hidden mr-16 shadow sm:flex w-128">
                                 <div className="w-full h-auto mb-2 bg-white border-4 rounded border-amber-400">
                                         <img
                                                 src={solutionsService[choicesState.solution].imgUrl}
@@ -37,7 +37,7 @@ const Order: React.FunctionComponent<OrderProps> = () => {
                                                 </p>
                                         </div>
                                 </div>
-                                <div className="flex w-full h-40 rounded">
+                                <div className="flex w-full h-40 rounded shadow">
                                         <div className="w-56 h-full">
                                                 <img
                                                         src={locations[choicesState.location].imgUrl}
@@ -67,7 +67,7 @@ const Order: React.FunctionComponent<OrderProps> = () => {
                                 <div className="w-full h-56 mb-4">
                                         <img className="w-full h-full" src="/share/order.svg" alt="" />
                                 </div>
-                                <div className="px-4 py-8 bg-amber-300">
+                                <div className="px-4 py-8 rounded shadow bg-amber-300">
                                         <p className="mb-4 text-base font-bold text-white">
                                                 Enter you email that we can contact with you
                                         </p>
@@ -79,16 +79,16 @@ const Order: React.FunctionComponent<OrderProps> = () => {
                                                         type="text"
                                                         name="email"
                                                         id="email"
-                                                        className="flex w-full h-10 px-4 mb-4 bg-white rounded outline-none"
+                                                        className="flex w-full h-10 px-4 mb-4 bg-white rounded shadow outline-none"
                                                         defaultValue={UserState.email}
                                                 />
                                                 <Link to="order/done">
-                                                        <button className="w-full py-2 mb-4 text-base font-bold text-center text-white border-2 border-white rounded outline-none bg-amber-300 focus:outline-none">
+                                                        <button className="w-full py-2 mb-4 text-base font-bold text-center text-white border-2 border-white rounded shadow outline-none hover:border-blue-100 bg-amber-300 focus:outline-none">
                                                                 Get in touch
                                                         </button>
                                                 </Link>
                                                 <Link to="order/done">
-                                                        <button className="w-full py-2 text-base font-bold text-center text-blue-400 border-2 border-blue-400 rounded outline-none bg-amber-300 focus:outline-none">
+                                                        <button className="w-full py-2 text-base font-bold text-center text-blue-400 border-2 border-blue-400 rounded shadow outline-none hover:text-white hover:border-white bg-amber-300 focus:outline-none">
                                                                 Book a tour
                                                         </button>
                                                 </Link>

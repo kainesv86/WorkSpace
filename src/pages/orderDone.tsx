@@ -12,7 +12,7 @@ const OrderDone: React.FunctionComponent<OrderDoneProps> = () => {
                         </div>
                         <div className="justify-center w-full px-8 mt-8 sm:flex">
                                 <Link to="/">
-                                        <button className="w-full px-4 py-2 text-white rounded outline-none sm:w-48 bg-amber-400 focus:outline-none">
+                                        <button className="w-full px-4 py-2 text-white rounded outline-none sm:w-48 bg-amber-400 focus:outline-none hover:bg-amber-500">
                                                 Back to Home
                                         </button>
                                 </Link>

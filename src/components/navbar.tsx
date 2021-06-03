@@ -43,7 +43,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
 
         return (
                 <React.Fragment>
-                        <div className="relative z-10 flex items-center justify-between w-full h-20 px-4 bg-amber-400 sm:px-8">
+                        <div className="relative z-10 flex items-center justify-between w-full h-20 px-4 shadow bg-amber-400 sm:px-8">
                                 <Link to="/">
                                         <img src="/share/logo.svg" alt="hello" />
                                 </Link>
@@ -57,8 +57,8 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                                                                 key={item.name}
                                                         >
                                                                 <Link to={item.path}>
-                                                                        <div className="flex flex-col justify-end h-full">
-                                                                                <p className="text-base font-bold text-white">
+                                                                        <div className="flex flex-col justify-end h-full ">
+                                                                                <p className="z-10 text-base font-bold text-white ">
                                                                                         {item.label}
                                                                                 </p>
                                                                                 <span

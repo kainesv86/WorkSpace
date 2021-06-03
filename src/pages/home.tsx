@@ -16,7 +16,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
                                 <div className="mb-8 ml-0 w-80 h-52 sm:mb-0 sm:ml-40 sm:h-96 sm:w-136">
                                         <img src="/share/home.svg" alt="" className="w-full h-full" />
                                 </div>
-                                <div className="flex flex-col justify-start p-2 rounded-sm w- sm:p-8 bg-amber-400">
+                                <div className="flex flex-col justify-start p-2 rounded-sm shadow w- sm:p-8 bg-amber-400">
                                         <h1 className="mb-2 text-2xl font-bold text-white sm:mb-4 sm:text-4xl">
                                                 Get your Space
                                         </h1>
@@ -27,13 +27,13 @@ const Home: React.FunctionComponent<HomeProps> = () => {
                                                 Just turn up, check in and pay as you go!
                                         </h2>
                                         <select
-                                                className="w-full h-10 p-3 my-2 text-xs font-medium text-gray-500 rounded-sm outline-none sm:my-4"
+                                                className="w-full h-10 p-3 my-2 text-xs font-medium text-gray-500 rounded-sm shadow outline-none cursor-pointer sm:my-4"
                                                 defaultValue="HCM"
                                         >
                                                 <option value="HCM">Ho Chi Minh City</option>
                                         </select>
                                         <Link to="/locations">
-                                                <button className="w-full py-2 text-xs font-bold text-center bg-white divide-gray-400 rounded-sm outline-none text-amber-400 focus:outline-none">
+                                                <button className="w-full py-2 text-xs font-bold text-center bg-white divide-gray-400 rounded-sm shadow outline-none hover:bg-blue-50 text-amber-400 focus:outline-none">
                                                         Start
                                                 </button>
                                         </Link>

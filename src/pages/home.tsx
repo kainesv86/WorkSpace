@@ -33,7 +33,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
                                                 <option value="HCM">Ho Chi Minh City</option>
                                         </select>
                                         <Link to="/locations">
-                                                <button className="w-full py-2 text-xs font-bold text-center bg-white divide-gray-400 rounded-sm shadow outline-none hover:bg-blue-50 text-amber-400 focus:outline-none">
+                                                <button className="w-full py-2 text-base font-bold text-center bg-white divide-gray-400 rounded-sm shadow outline-none hover:bg-blue-50 text-amber-400 focus:outline-none">
                                                         Start
                                                 </button>
                                         </Link>

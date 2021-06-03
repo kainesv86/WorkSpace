@@ -75,7 +75,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                                         </ul>
                                 </div>
                                 {!userState.isLogin ? (
-                                        <div className="flex hidden sm:flex">
+                                        <div className="hidden sm:flex">
                                                 <Link to="/user/register">
                                                         <div className="px-4 py-2 mr-2 text-base font-bold text-white cursor-pointer">
                                                                 Register
@@ -88,7 +88,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                                                 </Link>
                                         </div>
                                 ) : (
-                                        <div className="flex hidden sm:flex">
+                                        <div className="hidden  sm:flex">
                                                 <div className="px-4 py-2 mr-2 text-base font-bold text-white cursor-pointer">
                                                         {`Hello ${userState.fullName}`}
                                                 </div>

@@ -6,7 +6,7 @@ export interface OrderDoneProps {}
 const OrderDone: React.FunctionComponent<OrderDoneProps> = () => {
         return (
                 <div className="flex flex-col items-center w-full h-screen py-16 animate-fade-in">
-                        <h1 className="mb-8 text-5xl font-bold text-amber-500">Coming Soon</h1>
+                        <h1 className="mb-8 text-5xl font-bold text-amber-500">Order Success</h1>
                         <div>
                                 <img src="/share/orderDone.svg" alt="" />
                         </div>

@@ -12,9 +12,9 @@ import { Route, Switch } from "react-router-dom";
 
 function App() {
         return (
-                <div className="relative h-screen">
+                <div className="flex flex-col min-h-screen">
                         <NavBar />
-                        <div className="h-auto">
+                        <div className="flex-1">
                                 <Switch>
                                         <Route path="/locations">
                                                 <Locations />

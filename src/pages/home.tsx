@@ -5,7 +5,7 @@ export interface HomeProps {}
 
 const Home: React.FunctionComponent<HomeProps> = () => {
     return (
-        <div className="items-center justify-center w-full mt-8 animate-fade-in">
+        <div className="items-center justify-center w-full mt-4 sm:mt-0 animate-fade-in">
             <h1 className="text-3xl font-semibold tracking-tight text-center sm:text-6xl text-amber-500">The best place for Working</h1>
             <h2 className="text-xl font-medium tracking-tight text-center sm:text-4xl text-amber-500">
                 Take advantage of team working by using Co-working Space today!

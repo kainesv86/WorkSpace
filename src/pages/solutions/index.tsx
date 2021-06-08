@@ -22,7 +22,7 @@ const Solutions: React.FunctionComponent<SolutionsProps> = () => {
     );
 
     return (
-        <div className="items-center justify-center w-full px-0 mt-8 sm:px-20 animate-fade-in">
+        <div className="items-center justify-center w-full px-0 mt-4 sm:px-20 animate-fade-in sm:mt-0">
             <h1 className="text-3xl font-semibold tracking-tight text-center sm:text-6xl text-amber-500">Working solutions</h1>
             <h2 className="text-xl font-medium tracking-tight text-center sm:text-4xl text-amber-500">For companies of all sizes, fit your needs</h2>
             <div className="justify-center w-full px-8 mt-8 sm:flex">

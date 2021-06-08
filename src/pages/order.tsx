@@ -49,6 +49,7 @@ const Order: React.FunctionComponent<OrderProps> = () => {
                     <p className="mb-4 text-lg font-bold text-blue-800">Enter you email that we can contact with you</p>
                     <form>
                         <input
+                            placeholder="example@anchor.co"
                             type="text"
                             name="email"
                             id="email"

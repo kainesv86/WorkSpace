@@ -30,7 +30,7 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
                     <div className="flex flex-col w-40 mr-4 text-lg font-medium tracking-tighter sm:mr-20 sm:w-auto text-blueGray-700">
                         <h2 className="mb-4 text-xl font-semibold text-blue-800 sm:text-3xl">Contact</h2>
                         <a href="/">T: +40 753 353 956</a>
-                        <a href="/">Email: Kaine@workspace.co</a>
+                        <a href="/">Email: Kaine@anchor.co</a>
                     </div>
                     <div className="flex flex-col w-40 text-lg font-medium tracking-tighter sm:w-auto text-blueGray-700">
                         <h2 className="mb-4 text-xl font-semibold text-blue-800 sm:text-3xl">Legal</h2>

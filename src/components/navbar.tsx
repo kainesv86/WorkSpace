@@ -43,7 +43,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
 
     return (
         <React.Fragment>
-            <div className="relative z-10 flex items-center justify-between w-full h-20 px-4 shadow bg-amber-400 sm:px-8">
+            <div className="relative z-20 flex items-center justify-between w-full h-20 px-4 mb-0 shadow sm:mb-16 bg-amber-400 sm:px-8">
                 <Link to="/">
                     <div className="w-32 h-auto">
                         <img src="/share/logo.svg" alt="hello" />
@@ -96,7 +96,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
                 </div>
             </div>
             {burger ? (
-                <div className="absolute top-0 right-0 z-0 flex flex-col justify-between min-h-screen bg-gradient-to-t from-amber-400 via-amber-300 to-amber-300 w-80">
+                <div className="absolute top-0 right-0 z-10 flex flex-col justify-between min-h-screen bg-gradient-to-t from-amber-400 via-amber-300 to-amber-300 w-80">
                     <ul className="p-8 pt-28">
                         {links.map((item) => (
                             <li

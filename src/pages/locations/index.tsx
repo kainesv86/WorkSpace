@@ -39,10 +39,10 @@ const Locations: React.FunctionComponent<LocationsProps> = () => {
                 </div>
                 <ul className="overflow-auto bg-white rounded shadow sm:h-144 sm:w-128">
                     {locations.map((item, index) => {
-                        let workSpaceClassName = `w-full mb-2 flex sm:flex-row flex-col cursor-pointer   duration-500 shadow-sm ` || "";
+                        let workSpaceClassName = `w-full mb-2 flex sm:flex-row flex-col cursor-pointer   duration-500 shadow-sm` || "";
                         workSpaceClassName += choice === index ? " bg-amber-300" : " bg-amber-50";
                         return (
-                            <li className={workSpaceClassName} key={item.city} onClick={() => handleClick(index)}>
+                            <li className={workSpaceClassName} key={item.name} onClick={() => handleClick(index)}>
                                 <div className="w-full h-48 sm:h-40 sm:w-52">
                                     <img src={item.imgUrl} alt="" className="w-full h-full" />
                                 </div>
@@ -50,6 +50,9 @@ const Locations: React.FunctionComponent<LocationsProps> = () => {
                                     <h1 className="text-2xl font-medium ">{item.name}</h1>
                                     <h2 className="text-xl ">{item.city}</h2>
                                     <p className="text-base font-light">{item.tags}</p>
+                                    <Link to="/gallery">
+                                        <p className="mt-2 font-medium text-blue-600">View Gallery</p>
+                                    </Link>
                                 </div>
                             </li>
                         );

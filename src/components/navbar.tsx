@@ -45,11 +45,11 @@ const NavBar: React.FunctionComponent<NavBarProps> = () => {
         <React.Fragment>
             <div className="relative z-20 flex items-center justify-between w-full h-20 px-4 mb-0 shadow sm:mb-16 bg-amber-400 sm:px-8">
                 <Link to="/">
-                    <div className="w-32 h-auto">
+                    <div className="w-32 h-auto transform -translate-y-1">
                         <img src="/share/logo.svg" alt="hello" />
                     </div>
                 </Link>
-                <div className="hidden h-full sm:block">
+                <div className="hidden h-full transform translate-x-16 sm:block">
                     <ul className="flex h-full">
                         {links.map((item, index) => (
                             <li className={`h-full ${index === links.length - 1 ? "" : "mr-6"}`} key={item.name}>

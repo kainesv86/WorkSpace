@@ -12,7 +12,7 @@ const OrderDone: React.FunctionComponent<OrderDoneProps> = () => {
         <div className="flex flex-col items-center w-full h-screen py-16 animate-fade-in">
             <h1 className="mb-8 text-5xl font-bold text-amber-500">{`Order #${orderNumber} successfully`}</h1>
             <div>
-                <img src="/share/orderDone.svg" alt="" />
+                <img src="/share/orderdone.svg" alt="" />
             </div>
             <div className="justify-center w-full px-8 mt-8 sm:flex">
                 <Link to="/">
